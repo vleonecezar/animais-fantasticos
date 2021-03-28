@@ -57,3 +57,23 @@ function initSmoothScroll() {
   })
 }
 initSmoothScroll()
+
+function initAnimeScroll() {
+  const sections = document.querySelectorAll('.js-scroll')
+  const halfWindow = window.innerHeight * 0.6
+
+  function animeScroll() {
+   sections.forEach(section => {
+      const sectionTop = section.getBoundingClientRect().top
+      const isSectionVisible = (sectionTop - halfWindow < 0)
+    
+      if(isSectionVisible) 
+        section.classList.add('active')
+   })
+  }
+  animeScroll()
+
+  window.addEventListener('scroll', animeScroll)
+}
+
+initAnimeScroll()
