@@ -1,15 +1,16 @@
 function initTabNav() {
   const activeClass = 'active'
 
-  const tabMenu = document.querySelectorAll('.js-tabmenu li')
-  const tabContent = document.querySelectorAll('.js-tabcontent section')
+  const tabMenu = document.querySelectorAll('[data-tab="menu"] li')
+  const tabContent = document.querySelectorAll('[data-tab=content] section')
   tabContent[0].classList.add(activeClass)
 
   function activeTab(index) {
     tabContent.forEach(section => {
       section.classList.remove(activeClass)
     })
-    tabContent[index].classList.add(activeClass)
+    const direction = tabContent[index].dataset.anime
+    tabContent[index].classList.add(activeClass, direction)
   }
   
   tabMenu.forEach((img, index) => {
@@ -23,7 +24,7 @@ initTabNav()
 function initAccordion() {
   const activeClass = 'active'
 
-  const accordionList = document.querySelectorAll('.js-accordion dt')
+  const accordionList = document.querySelectorAll('[data-anime="accordion"] dt')
   accordionList[0].classList.add(activeClass)
   accordionList[0].nextElementSibling.classList.add(activeClass)
 
@@ -40,7 +41,7 @@ function initAccordion() {
 initAccordion()
 
 function initSmoothScroll() {
-  const internalLinks = document.querySelectorAll('.js-menu a[href^="#"]')
+  const internalLinks = document.querySelectorAll('[data-menu="smooth"] a[href^="#"]')
 
   function scrollToSection(event) {
     event.preventDefault()
@@ -59,7 +60,7 @@ function initSmoothScroll() {
 initSmoothScroll()
 
 function initAnimeScroll() {
-  const sections = document.querySelectorAll('.js-scroll')
+  const sections = document.querySelectorAll('[data-anime="scroll"]')
   const halfWindow = window.innerHeight * 0.6
 
   function animeScroll() {
@@ -77,3 +78,6 @@ function initAnimeScroll() {
 }
 
 initAnimeScroll()
+
+/*  */
+
