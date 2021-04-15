@@ -1,20 +1,22 @@
 export default function initTabNav() {
-  const activeClass = 'active'
+  const tabMenu = document.querySelectorAll('[data-tab="menu"] li');
+  const tabContent = document.querySelectorAll('[data-tab="content"] section');
 
-  const tabMenu = document.querySelectorAll('[data-tab="menu"] li')
-  const tabContent = document.querySelectorAll('[data-tab=content] section')
-  tabContent[0].classList.add(activeClass)
+  if(tabMenu.length && tabContent.length) {
+    tabContent[0].classList.add('ativo');
 
-  function activeTab(index) {
-    tabContent.forEach(section => {
-      section.classList.remove(activeClass)
-    })
-    const direction = tabContent[index].dataset.anime
-    tabContent[index].classList.add(activeClass, direction)
+    function activeTab(index) {
+      tabContent.forEach((section) => {
+        section.classList.remove('ativo');
+      });
+      const direcao = tabContent[index].dataset.anime;
+      tabContent[index].classList.add('ativo', direcao);
+    }
+
+    tabMenu.forEach((itemMenu, index) => {
+      itemMenu.addEventListener('click', () => {
+        activeTab(index);
+      });
+    });
   }
-  
-  tabMenu.forEach((img, index) => {
-    img.addEventListener('click', () => activeTab(index))
-  })
-
 }
