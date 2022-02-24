@@ -1,10 +1,6 @@
+<h1>Animais Fantásticos 🦊</h1>
 
-# 💻 ANIMAIS FANTÁSTICOS
-
----
-
-## 🗒️ Sobre o projeto
-
+<div style="text-align: justify;">
 Animais Fantásticos é um site com informações sobre animais.
 
 O site contém uma navbar onde existe um dropdown no item "sobre" e um modal se abre ao clicar em "login". 
@@ -14,31 +10,19 @@ Um slide é exibido com as fotos dos animais e a navegação é possível tanto 
 A cotação do bitcoin é recebida através da api: "https://blockchain.info/ticker"
 
 Todo o código foi feito em modules e foi usado o webpack e babel tanto para os modulos quanto para traspilar o código.
-
-<a href="https://vleonecezar.github.io/animais-fantasticos/">CLIQUE AQUI PARA TESTAR</a>
-
----
+</div>
 
 ## 🛠 Tecnologias
 
-### Frontend:
+- <code>HTML</code>
+- <code>CSS</code>
+- <code>JavaScript</code>
 
--   HTML
--   CSS
--   JavaScript
+## 💻 Screens 📱
+<div align="center">
+  
+![desktop](https://user-images.githubusercontent.com/76831929/155433018-00c5b7af-a6ba-4030-830c-3ba3ae6c1f00.png)
+![mobile](https://user-images.githubusercontent.com/76831929/155433025-99948e78-351e-4f91-9c6f-07040586e8f8.png)
+  
+</div>
 
----
-
-## 🎨 Screens
-
-### Web
-
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="" src="desktop.png" width="600px">
-</p>
-
-### Mobile
-
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="" src="mobile.png" width="300px">
-</p>
